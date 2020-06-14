@@ -31,11 +31,8 @@ function App() {
   ])
 
   const total = (products) => {
-    let total = 0
-    products.forEach(product => {
-      total += product.price * product.qty
-    })
-    return total
+    return products.map(product => product.qty * product.price)
+      .reduce((total, qty) => total + qty)
   }
 
   const addProduct = (name, price) => {
