@@ -30,6 +30,7 @@ function ProductForm(props) {
 			<TextInput
 				style={styles.textInput}
 				onChangeText={text => onChangePrice(text)}
+				keyboardType='number-pad'
 				value={price}
 				placeholder='Harga produk'
 			/>
